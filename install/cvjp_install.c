@@ -1,7 +1,11 @@
 #include <stdio.h>
+
 #include <string.h>
+
 #include <ctype.h>
+
 #include <stdarg.h>
+
 #include "cvjp.h"
 
 // The function prints to the screen using strings format and supports template literals
