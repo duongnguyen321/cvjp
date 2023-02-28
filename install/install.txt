@@ -1,0 +1,4 @@
+Step 1: Delete all the _install behind the extensions in the install folder
+Step 2: Put the .h folder in the Include folder section of the environment
+Step 3: Put the .a and .o folders in the lib folder section of the environment
+Now you can use this library in just 3 steps ...

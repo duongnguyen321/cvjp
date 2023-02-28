@@ -1,0 +1,2 @@
+gcc -c cvjp.c -o cvjp.o
+ar -rc libcvjp.a cvjp.o
