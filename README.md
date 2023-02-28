@@ -32,7 +32,7 @@ To see an example usage of the `prints` function, check out the source code file
     int result = factorial(n);
     prints("%d! = %d", n, result);
 
-To see an example usage of the `factorial` function, check out the source code file [factorial.c](./Examplefactorial/factorial.c).
+To see an example usage of the `factorial` function, check out the source code file [factorial.c](./Example/factorial/factorial.c).
 
 ### For example, to use the `quicksort` function:
 
@@ -43,7 +43,7 @@ To see an example usage of the `factorial` function, check out the source code f
     quicksort(arr, 0, lengtharr - 1);
     prints("The sorted array is: %a", lengtharr, arr);
 
-To see an example usage of the `quicksort` function, check out the source code file [quicksort.c](./Examplequicksort/quicksort.c).
+To see an example usage of the `quicksort` function, check out the source code file [quicksort.c](./Example/quicksort/quicksort.c).
 
 ### For example, to use the `sortup` function:
 
@@ -54,7 +54,7 @@ To see an example usage of the `quicksort` function, check out the source code f
     sortup(arr, lengtharr);
     prints("The sorted array is: %a", lengtharr, arr);
 
-To see an example usage of the `sortup` function, check out the source code file [sortup.c](./Examplesortup/sortup.c).
+To see an example usage of the `sortup` function, check out the source code file [sortup.c](./Example/sortup/sortup.c).
 
 ### For example, to use the `totalarray` function:
 
@@ -65,7 +65,7 @@ To see an example usage of the `sortup` function, check out the source code file
     int sum = totalarray(arr, lengtharr);
     prints("The sum of the array elements is: %d", sum);
 
-To see an example usage of the `totalarray` function, check out the source code file [totalarray.c](./Exampletotalarray/totalarray.c).
+To see an example usage of the `totalarray` function, check out the source code file [totalarray.c](./Example/totalarray/totalarray.c).
 
 ### For example, to use the `arrayin` and `arrayout` functions:
 
@@ -77,7 +77,7 @@ To see an example usage of the `totalarray` function, check out the source code 
     prints("The array elements are:");
     arrayout(arr, length);
 
-To see an example usage of the `arrayin` and `arrayout` functions, check out the source code file [arrayinout.c](./Examplearrayinout/arrayinout.c).
+To see an example usage of the `arrayin` and `arrayout` functions, check out the source code file [arrayinout.c](./Example/arrayinout/arrayinout.c).
 
 ### For example, to use the `matrixin` and `matrixout` functions:
 
@@ -89,7 +89,7 @@ To see an example usage of the `arrayin` and `arrayout` functions, check out the
     prints("The matrix elements are:\n");
     matrixout(matrix, row, col);
 
-To see an example usage of the `matrixin` and `matrixout` functions, check out the source code file [matrixinout.c](./Examplematrixinout/matrixinout.c).
+To see an example usage of the `matrixin` and `matrixout` functions, check out the source code file [matrixinout.c](./Example/matrixinout/matrixinout.c).
 
 ### For example, to use `findindex` to find the index of a given value in an array:
 
@@ -100,7 +100,7 @@ To see an example usage of the `matrixin` and `matrixout` functions, check out t
     prints("The index of %d in the array is: %d", number, index)
 
 This will find the index of `val` in the array `arr` of size `n`.
-To see an example usage of the `findindex` function, check out the source code file [./Examplefindindex/findindex.c](./Examplefindindex/findindex.c).
+To see an example usage of the `findindex` function, check out the source code file [./Example/findindex/findindex.c](./Example/findindex/findindex.c).
 
 ### For example, to use `minmaxf` to find the minimum and maximum values in an array:
 
@@ -112,7 +112,7 @@ To see an example usage of the `findindex` function, check out the source code f
     prints("The maximum value in the array is: %d", max_val);
 
 This will find the minimum and maximum values in the array `arr` of size `n`.
-To see an example usage of the `minmaxf` function, check out the source code file [minmaxf.c](./Exampleminmaxf/minmaxf.c).
+To see an example usage of the `minmaxf` function, check out the source code file [minmaxf.c](./Example/minmaxf/minmaxf.c).
 
 ### For example, to use `validemail` to check if a given email address is valid:
 
@@ -123,7 +123,7 @@ To see an example usage of the `minmaxf` function, check out the source code fil
     prints("The email address %s is %s", email, is_valid ? "valid" : "invalid");
 
 This will check if the email address `email` is valid.
-To see an example usage of the `validemail` function, check out the source code file [validemail.c](./Examplevalidemail/validemail.c).
+To see an example usage of the `validemail` function, check out the source code file [validemail.c](./Example/validemail/validemail.c).
 
 ### For example, to use `getemail` to extract the domain name from a given email address:
 
@@ -134,7 +134,7 @@ To see an example usage of the `validemail` function, check out the source code 
     prints("Your email is: %s", email);
 
 This will extract the domain name from the email address `email`.
-To see an example usage of the `getemail` function, check out the source code file [getemail.c](./Examplegetemail/getemail.c).
+To see an example usage of the `getemail` function, check out the source code file [getemail.c](./Example/getemail/getemail.c).
 
 ### For example, to use `validpassword` to check if a given password is valid:
 
@@ -145,7 +145,7 @@ To see an example usage of the `getemail` function, check out the source code fi
     prints("The password %s is %s", password, is_valid ? "valid" : "invalid");
 
 This will check if the password `password` is valid.
-To see an example usage of the `validpassword` function, check out the source code file [validpassword.c](./Examplevalidpassword/validpassword.c).
+To see an example usage of the `validpassword` function, check out the source code file [validpassword.c](./Example/validpassword/validpassword.c).
 
 ### For example, to use `getpasswords` to requires the user to enter a password:
 
@@ -158,7 +158,7 @@ To see an example usage of the `validpassword` function, check out the source co
 
 \*Note that the parameters passed to the function must match the requirements given in the function parameter.
 For example, if you want to require a password with at least one digit, you need to set the "digit" parameter to 1.
-To see an example usage of the `getpasswords` function, check out the source code file [getpasswords.c](./Examplegetpasswords/getpasswords.c).
+To see an example usage of the `getpasswords` function, check out the source code file [getpasswords.c](./Example/getpasswords/getpasswords.c).
 
 ### For example, to use `getpassword` requires the user to enter a password:
 
@@ -172,7 +172,7 @@ To see an example usage of the `getpasswords` function, check out the source cod
     printf("Your password is: %s\n", password);
 
 \*Note When running the program, the getpassword function will be called to retrieve the password from the user with specific requirements
-To see an example usage of the `getpassword` function, check out the source code file [getpassword.c](./Examplegetpassword/getpassword.c).
+To see an example usage of the `getpassword` function, check out the source code file [getpassword.c](./Example/getpassword/getpassword.c).
 
 ## Functions
 
