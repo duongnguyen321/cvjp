@@ -4,7 +4,7 @@
 #include <stdarg.h>
 #include "cvjp.h"
 
-// hàm in ra màn hình sử dụng strings format và hỗ trợ template literals
+// The function prints to the screen using strings format and supports template literals
 void prints(const char *format, ...)
 {
     va_list args;
@@ -61,7 +61,7 @@ void prints(const char *format, ...)
     }
     va_end(args);
 }
-// Hàm tính giai thừa
+// Factorial function
 int factorial(int n)
 {
     if (n == 0 || n == 1)
@@ -69,19 +69,19 @@ int factorial(int n)
     else
         return n * factorial(n - 1);
 }
-// Hàm hoán vị hai số nguyên
+// Function to permute two integers
 void swap(int *a, int *b)
 {
     int temp = *a;
     *a = *b;
     *b = temp;
 }
-// Hàm sắp xếp nhanh một mảng số nguyên
+// Quick sort function for an array of integers
 void quicksort(int arr[], int left, int right)
 {
     int i = left, j = right;
     int pivot = arr[(left + right) / 2];
-    // Phân đoạn mảng thành hai phần: phần nhỏ hơn pivot và phần lớn hơn pivot
+    // Segment the array into two parts: the part smaller than the pivot and the part larger than the pivot
     while (i <= j)
     {
         while (arr[i] < pivot)
@@ -95,24 +95,24 @@ void quicksort(int arr[], int left, int right)
             j--;
         }
     }
-    // Gọi đệ quy để sắp xếp hai phần đã phân đoạn
+    // Call recursively to sort two segmented parts
     if (left < j)
         quicksort(arr, left, j);
     if (i < right)
         quicksort(arr, i, right);
 }
-// Hàm sắp xếp mảng arr theo thứ tự tăng dần
+// Function to sort array arr in ascending order
 void sortup(int arr[], int length)
 {
-    // Khai báo biến tạm tempNum để lưu trữ giá trị tạm thời trong quá trình đổi chỗ các phần tử
+    // Declare temporary variable tempNum to store temporary value during element swap
     int tempNum;
-    // Duyệt qua tất cả các phần tử của mảng arr
+    // Iterate over all elements of array arr
     for (int i = 0; i < length; i++)
     {
-        // Duyệt qua tất cả các phần tử của mảng arr trừ phần tử cuối cùng
+        // Iterate over all elements of array arr except the last element
         for (int j = 0; j < length - 1; j++)
         {
-            // Nếu phần tử thứ j lớn hơn phần tử thứ j+1 thì đổi chỗ vị trí của 2 phần tử này
+            // If the jth element is greater than the j+1th element, swap the positions of these two elements
             if (arr[j] > arr[j + 1])
             {
                 tempNum = arr[j];
@@ -122,7 +122,7 @@ void sortup(int arr[], int length)
         }
     }
 }
-// hàm tính tổng các phần tử trong mảng
+// function that calculates the sum of elements in an array
 int totalarray(int arr[], int length)
 {
     int sum = 0;
@@ -132,7 +132,7 @@ int totalarray(int arr[], int length)
     }
     return sum;
 }
-// hàm nhập một array dựa theo length
+// function that inputs an array based on length
 void arrayin(int arr[], int length)
 {
     for (int i = 0; i < length; i++)
@@ -141,7 +141,7 @@ void arrayin(int arr[], int length)
         scanf("%d", &arr[i]);
     }
 }
-// hàm xuất ra một array dựa theo length
+// function outputs an array based on length
 void arrayout(int arr[], int length)
 {
     for (int i = 0; i < length; i++)
@@ -150,7 +150,7 @@ void arrayout(int arr[], int length)
     }
     printf("\n");
 }
-// hàm nhập vào một ma trận theo row, col
+// function to input a matrix by row, col
 void matrixin(int matrix[][100], int row, int col)
 {
     for (int i = 0; i < row; i++)
@@ -162,7 +162,7 @@ void matrixin(int matrix[][100], int row, int col)
         }
     }
 }
-// hàm xuất ra một ma trận theo row, col
+// function outputs a matrix by row, col
 void matrixout(int matrix[][100], int row, int col)
 {
     for (int i = 0; i < row; i++)
@@ -174,7 +174,7 @@ void matrixout(int matrix[][100], int row, int col)
         printf("\n");
     }
 }
-// hàm tìm index của một phần tử trong một mảng
+// function to find the index of an element in an array
 int findindex(int arr[], int length, int num)
 {
     for (int i = 0; i < length; i++)
@@ -182,7 +182,7 @@ int findindex(int arr[], int length, int num)
             return i;
     return -1;
 }
-// tìm số lớn nhất, nhỏ nhất của một mảng, return ra các biến trỏ min và max
+// find the largest and smallest number of an array, return the pointers min and max
 void minmaxf(int arr[], int length, int *min, int *max)
 {
     *min = arr[0];
@@ -198,8 +198,8 @@ void minmaxf(int arr[], int length, int *min, int *max)
             *max = arr[i];
         }
     }
-} // hàm kiểm tra email có hợp lệ hay không
-// hàm trả về 1 nếu email hợp lệ, 0 nếu không hợp lệ
+}
+// function to check email is valid or not
 int validemail(char email[])
 {
     int at_index = -1, dot_index = -1, len = strlen(email);
@@ -232,7 +232,7 @@ int validemail(char email[])
     }
     return 0;
 }
-// hàm nhập email nếu không hợp lệ thì yêu cầu nhập lại
+// email input function if not valid, ask to re-enter
 void getemail(char email[])
 {
     while (1)
@@ -247,62 +247,62 @@ void getemail(char email[])
         printf("Email is invalid, enter again.\n");
     }
 }
-// hàm kiểm tra mật khẩu
+// password check function
 int validpassword(char password[], int length, int special_char, int uppercase, int lowercase, int digit, char email[], char name[])
 {
-    // Kiểm tra độ dài
+    // Check length
     if (length > 0 && strlen(password) < length)
     {
         return 0;
     }
-    // Kiểm tra ký tự đặc biệt
+    // Check special characters
     if (special_char && strspn(password, "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789") == strlen(password))
     {
         return 0;
     }
-    // Kiểm tra chữ hoa
+    // Check for uppercase
     if (uppercase && strspn(password, "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&()_-+={}[]|\\:;\"'<>,.?/~") == strlen(password))
     {
         return 0;
     }
-    // Kiểm tra chữ thường
+    // Check lowercase
     if (lowercase && strspn(password, "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-+={}[]|\\:;\"'<>,.?/~") == strlen(password))
     {
         return 0;
     }
-    // Kiểm tra số
+    // Check number
     if (digit && strspn(password, "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&()_-+={}[]|\\:;\"'<>,.?/~`") == strlen(password))
     {
         return 0;
     }
-    // Kiểm tra trùng với email
+    // Check email match
     if (strlen(email) > 0 && strstr(password, email) != NULL)
     {
         return 0;
     }
-    // Kiểm tra trùng với tên người dùng
+    // Check for username match
     if (strlen(name) > 0 && strstr(password, name) != NULL)
     {
         return 0;
     }
     return 1;
 }
-// hàm nhập mật khẩu nếu không hợp lệ thì yêu cầu nhập lại
+// password input function, if it is not valid, it will ask you to re-enter it
 void getpasswords(char password[], int length, int special_char, int uppercase, int lowercase, int digit, char email[], char name[])
 {
     while (1)
     {
-        printf("Nhap mat khau: ");
+        printf("Enter your password: ");
         fgets(password, 100, stdin);
         password[strcspn(password, "\n")] = '\0';
         if (validpassword(password, length, special_char, uppercase, lowercase, digit, email, name))
         {
             break;
         }
-        printf("Mat khau khong hop le, vui long nhap lai.\n");
+        printf("Password is invalid, please enter again.\n");
     }
 }
-// hàm nhập mật khẩu với tham số mặc định
+// password input function with default parameters
 void getpassword(char password[])
 {
     getpasswords(password, 0, 0, 0, 0, 0, "", "");

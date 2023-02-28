@@ -1,44 +1,44 @@
 // File cvjp.h
 #ifndef CVJP_H
 #define CVJP_H
-// Khai báo các hàm C muốn sử dụng trong thư viện
+// Declare the C functions you want to use in the library
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
 #include <stdarg.h>
 
-// hàm in ra màn hình sử dụng strings format và hỗ trợ template literals
+// The function prints to the screen using strings format and supports template literals
 void prints(const char *format, ...);
-// Hàm tính giai thừa
+// Factorial function
 int factorial(int n);
-// Hàm hoán vị hai số nguyên
+// Function to permute two integers
 void swap(int *a, int *b);
-// Hàm sắp xếp nhanh một mảng số nguyên
+// Quick sort function for an array of integers
 void quicksort(int arr[], int left, int right);
-// Hàm sắp xếp mảng arr theo thứ tự tăng dần
+// Function to sort array arr in ascending order
 void sortup(int arr[], int length);
-// hàm tính tổng các phần tử trong mảng
+// function that calculates the sum of elements in an array
 int totalarray(int arr[], int length);
-// hàm nhập một array dựa theo length
+// function that inputs an array based on length
 void arrayin(int arr[], int length);
-// hàm xuất một array dựa theo length
+// function that outputs an array based on length
 void arrayout(int arr[], int length);
-// hàm nhập vào một ma trận theo row, col
+// function to input a matrix by row, col
 void matrixin(int matrix[][100], int row, int col);
-// hàm xuất ra một ma trận theo row, col
+// function outputs a matrix by row, col
 void matrixout(int matrix[][100], int row, int col);
-// hàm tìm index của một phần tử trong một mảng
+// function to find the index of an element in an array
 int findindex(int arr[], int length, int num);
-// tìm số lớn nhất, nhỏ nhất của một mảng, return ra một object
+// find the largest and smallest number of an array, return the pointers min and max
 void minmaxf(int arr[], int length, int *min, int *max);
-// hàm kiểm tra email có hợp lệ hay không
+// function to check email is valid or not
 int validemail(char email[]);
-// hàm nhập email nếu không hợp lệ thì yêu cầu nhập lại
+// email input function if not valid, ask to re-enter
 void getemail(char email[]);
-// hàm kiểm tra mật khẩu
+// password check function
 int validpassword(char password[], int length, int special_char, int uppercase, int lowercase, int digit, char email[], char name[]);
-// hàm nhập mật khẩu nếu không hợp lệ thì yêu cầu nhập lại
+// password input function, if it is not valid, it will ask you to re-enter it
 void getpasswords(char password[], int length, int special_char, int uppercase, int lowercase, int digit, char email[], char name[]);
-// hàm nhập mật khẩu với tham số mặc định
+// password input function with default parameters
 void getpassword(char password[]);
-#endif // Kết thúc macro CVJP_H
+#endif // End of macro CVJP_LIFE
