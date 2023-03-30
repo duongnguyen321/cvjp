@@ -100,7 +100,7 @@ To see an example usage of the `matrixin` and `matrixout` functions, check out t
     prints("The index of %d in the array is: %d", number, index)
 
 This will find the index of `val` in the array `arr` of size `n`.
-To see an example usage of the `findindex` function, check out the source code file [./Example/findindex/findindex.c](./Example/findindex/findindex.c).
+To see an example usage of the `findindex` function, check out the source code file [findindex.c](./Example/findindex/findindex.c).
 
 ### For example, to use `minmaxf` to find the minimum and maximum values in an array:
 
